@@ -11,10 +11,10 @@ TagManager:
   - Ground
   - Water
   - UI
-  - Background
-  - Enemy
   - Player
-  - 
+  - Enemy
+  - Sword
+  - Item
   - 
   - 
   - 
@@ -52,4 +52,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3789855713
+    locked: 0
+  - name: Item
+    uniqueID: 2213554181
     locked: 0
