@@ -103,11 +103,11 @@ public class CharacterStats : MonoBehaviour
 
     public void MakeVulnerableFor(float _duration) => StartCoroutine(VulnerableCorutine(_duration));
 
-    private IEnumerator VulnerableCorutine(float _duartion)
+    private IEnumerator VulnerableCorutine(float _duration)
     {
         isVulnerable = true;
 
-        yield return new WaitForSeconds(_duartion);
+        yield return new WaitForSeconds(_duration);
 
         isVulnerable = false;
     }
@@ -155,7 +155,7 @@ public class CharacterStats : MonoBehaviour
         _targetStats.TakeDamage(totalDamage);
 
 
-         DoMagicalDamage(_targetStats); // remove if you don't want to apply magic hit on primary attack
+         DoMagicalDamage(_targetStats); 
 
     }
 

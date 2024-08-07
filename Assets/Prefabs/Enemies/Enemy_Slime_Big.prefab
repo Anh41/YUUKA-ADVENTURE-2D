@@ -232,19 +232,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strength:
-    baseValue: 4
+    baseValue: 0
     modifiers: 
   agility:
-    baseValue: 4
+    baseValue: 0
     modifiers: 
   intelligence:
-    baseValue: 4
+    baseValue: 0
     modifiers: 
   vitality:
-    baseValue: 4
+    baseValue: 0
     modifiers: 
   damage:
-    baseValue: 30
+    baseValue: 15
     modifiers: 
   critChance:
     baseValue: 0
@@ -253,16 +253,16 @@ MonoBehaviour:
     baseValue: 0
     modifiers: 
   maxHealth:
-    baseValue: 200
+    baseValue: 100
     modifiers: 
   armor:
-    baseValue: 10
+    baseValue: 0
     modifiers: 
   evasion:
     baseValue: 0
     modifiers: 
   magicResistance:
-    baseValue: 10
+    baseValue: 0
     modifiers: 
   fireDamage:
     baseValue: 0
@@ -282,7 +282,7 @@ MonoBehaviour:
   soulsDropAmount:
     baseValue: 0
     modifiers: 
-  level: 5
+  level: 1
   percantageModifier: 0.4
 --- !u!114 &7546619776816806397
 MonoBehaviour:
@@ -325,7 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5d919b49c547184da9b10d7bfd2876f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxItemsToDrop: 4
+  maxItemsToDrop: 0
   itemPool: []
   dropPrefab: {fileID: 8730514117533583190, guid: 7aaa3324c1c4b054ebebaafe3343bf25, type: 3}
 --- !u!114 &7546619776816806399
@@ -558,7 +558,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2081413115
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: -10
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 0.6862745}
@@ -826,7 +826,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2081413115
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: -1575814570, guid: 5b37f7e31a19796489c254db0005907c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1003,14 +1003,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3376266647829427755, guid: 5ee4612ebbfdefb488b04fed763655b1, type: 3}
-      propertyPath: m_SortingLayer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3376266647829427755, guid: 5ee4612ebbfdefb488b04fed763655b1, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1724668973
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1037,14 +1029,6 @@ PrefabInstance:
     - target: {fileID: 3038427717818873336, guid: 406035b4affc86141acb6b2db90f9cbd, type: 3}
       propertyPath: m_Name
       value: ChillFX
-      objectReference: {fileID: 0}
-    - target: {fileID: 3038427717818873342, guid: 406035b4affc86141acb6b2db90f9cbd, type: 3}
-      propertyPath: m_SortingLayer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3038427717818873342, guid: 406035b4affc86141acb6b2db90f9cbd, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1724668973
       objectReference: {fileID: 0}
     - target: {fileID: 3038427717818873343, guid: 406035b4affc86141acb6b2db90f9cbd, type: 3}
       propertyPath: m_RootOrder
@@ -1156,14 +1140,6 @@ PrefabInstance:
     - target: {fileID: 8391695977692023364, guid: 283d3449409af034e8c3ee7513141f6e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8391695977692023365, guid: 283d3449409af034e8c3ee7513141f6e, type: 3}
-      propertyPath: m_SortingLayer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8391695977692023365, guid: 283d3449409af034e8c3ee7513141f6e, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1724668973
       objectReference: {fileID: 0}
     - target: {fileID: 8391695977692023367, guid: 283d3449409af034e8c3ee7513141f6e, type: 3}
       propertyPath: m_Name

@@ -10,7 +10,7 @@ public class UI : MonoBehaviour, ISaveManager
     [SerializeField] private GameObject restartButton;
     [Space]
 
-    [SerializeField] private GameObject charcaterUI;
+    [SerializeField] private GameObject characterUI;
     [SerializeField] private GameObject skillTreeUI;
     [SerializeField] private GameObject craftUI;
     [SerializeField] private GameObject optionsUI;
@@ -47,7 +47,7 @@ public class UI : MonoBehaviour, ISaveManager
     {
 
         if (Input.GetKeyDown(KeyCode.C))
-            SwitchWithKeyTo(charcaterUI);
+            SwitchWithKeyTo(characterUI);
 
         if (Input.GetKeyDown(KeyCode.B))
             SwitchWithKeyTo(craftUI);

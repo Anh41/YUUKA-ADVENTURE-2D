@@ -166,7 +166,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2081413115
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 914748778, guid: 153ae5445ac704743a4296b65cd75f65, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -808,7 +808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strength:
-    baseValue: 5
+    baseValue: 0
     modifiers: 
   agility:
     baseValue: 0
@@ -823,7 +823,7 @@ MonoBehaviour:
     baseValue: 70
     modifiers: 
   critChance:
-    baseValue: 10
+    baseValue: 0
     modifiers: 
   critPower:
     baseValue: 0
@@ -844,7 +844,7 @@ MonoBehaviour:
     baseValue: 0
     modifiers: 
   iceDamage:
-    baseValue: 5
+    baseValue: 0
     modifiers: 
   lightingDamage:
     baseValue: 0
@@ -858,7 +858,7 @@ MonoBehaviour:
   soulsDropAmount:
     baseValue: 0
     modifiers: 
-  level: 3
+  level: 1
   percantageModifier: 0.4
 --- !u!114 &5529630772379239637
 MonoBehaviour:
@@ -901,7 +901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5d919b49c547184da9b10d7bfd2876f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxItemsToDrop: 4
+  maxItemsToDrop: 0
   itemPool: []
   dropPrefab: {fileID: 8730514117533583190, guid: 7aaa3324c1c4b054ebebaafe3343bf25, type: 3}
 --- !u!114 &5529630772379239639
@@ -1051,14 +1051,6 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8391695977692023365, guid: 283d3449409af034e8c3ee7513141f6e, type: 3}
-      propertyPath: m_SortingLayer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8391695977692023365, guid: 283d3449409af034e8c3ee7513141f6e, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1724668973
-      objectReference: {fileID: 0}
     - target: {fileID: 8391695977692023367, guid: 283d3449409af034e8c3ee7513141f6e, type: 3}
       propertyPath: m_Name
       value: IgniteFX
@@ -1158,14 +1150,6 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3376266647829427755, guid: 5ee4612ebbfdefb488b04fed763655b1, type: 3}
-      propertyPath: m_SortingLayer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3376266647829427755, guid: 5ee4612ebbfdefb488b04fed763655b1, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1724668973
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1196,14 +1180,6 @@ PrefabInstance:
     - target: {fileID: 3038427717818873341, guid: 406035b4affc86141acb6b2db90f9cbd, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3038427717818873342, guid: 406035b4affc86141acb6b2db90f9cbd, type: 3}
-      propertyPath: m_SortingLayer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3038427717818873342, guid: 406035b4affc86141acb6b2db90f9cbd, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1724668973
       objectReference: {fileID: 0}
     - target: {fileID: 3038427717818873343, guid: 406035b4affc86141acb6b2db90f9cbd, type: 3}
       propertyPath: m_RootOrder

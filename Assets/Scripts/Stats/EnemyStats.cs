@@ -12,7 +12,7 @@ public class EnemyStats : CharacterStats
     [SerializeField] private int level = 1;
 
     [Range(0f, 1f)]
-    [SerializeField] private float percentageModifier = .4f;
+    [SerializeField] private float percantageModifier = .4f;
 
     protected override void Start()
     {
@@ -52,7 +52,7 @@ public class EnemyStats : CharacterStats
     {
         for (int i = 1; i < level; i++)
         {
-            float modifier = _stat.GetValue() * percentageModifier;
+            float modifier = _stat.GetValue() * percantageModifier;
 
             _stat.AddModifier(Mathf.RoundToInt(modifier));
         }

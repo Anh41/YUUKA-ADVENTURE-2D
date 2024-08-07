@@ -498,7 +498,7 @@ RectTransform:
   m_Father: {fileID: 5413061282687218734}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.000030517578, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -676,7 +676,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5413061283600725296
 Transform:
   m_ObjectHideFlags: 0
@@ -809,31 +809,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strength:
-    baseValue: 5
+    baseValue: 2
     modifiers: 
   agility:
-    baseValue: 3
+    baseValue: 0
     modifiers: 
   intelligence:
-    baseValue: 3
+    baseValue: 0
     modifiers: 
   vitality:
-    baseValue: 5
+    baseValue: 10
     modifiers: 
   damage:
     baseValue: 25
     modifiers: 
   critChance:
-    baseValue: 5
+    baseValue: 99
     modifiers: 
   critPower:
     baseValue: 0
     modifiers: 
   maxHealth:
-    baseValue: 300
+    baseValue: 250
     modifiers: 
   armor:
-    baseValue: 5
+    baseValue: 0
     modifiers: 
   evasion:
     baseValue: 0
@@ -842,13 +842,13 @@ MonoBehaviour:
     baseValue: 0
     modifiers: 
   fireDamage:
-    baseValue: 3
+    baseValue: 0
     modifiers: 
   iceDamage:
-    baseValue: 3
+    baseValue: 0
     modifiers: 
   lightingDamage:
-    baseValue: 3
+    baseValue: 0
     modifiers: 
   isIgnited: 0
   isChilled: 0
@@ -857,10 +857,10 @@ MonoBehaviour:
   shockStrikePrefab: {fileID: 4158689088258206225, guid: 90919e9c918fc84499a3a88be8033ade, type: 3}
   currentHealth: 0
   soulsDropAmount:
-    baseValue: 200
+    baseValue: 0
     modifiers: 
   level: 2
-  percentageModifier: 0.4
+  percantageModifier: 0.4
 --- !u!70 &5413061283600725299
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -908,18 +908,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5d919b49c547184da9b10d7bfd2876f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxItemsToDrop: 4
-  itemPool:
-  - {fileID: 11400000, guid: 69369925ed773dd4f904c6f9ad97e8a1, type: 2}
-  - {fileID: 11400000, guid: 6835c34bd80fc9c468d2f549f4b6220a, type: 2}
-  - {fileID: 11400000, guid: d4606b3a097405a48b469cfa439b193b, type: 2}
-  - {fileID: 11400000, guid: 9337930988e275044b8e74fa4ca51510, type: 2}
-  - {fileID: 11400000, guid: 839fd2910ad77e744a35af1a16bb4118, type: 2}
-  - {fileID: 11400000, guid: 23dab0def0f934e4798e7f071ba6ecfa, type: 2}
-  - {fileID: 11400000, guid: aa2bc36c8c6e18d4fa19d98a060e572b, type: 2}
-  - {fileID: 11400000, guid: a0300e0089d439943998db8ef1c2617f, type: 2}
-  - {fileID: 11400000, guid: 14caadcff121d434e8b031ae47985e10, type: 2}
-  - {fileID: 11400000, guid: 7ff875b0438473344864b67d284e3630, type: 2}
+  maxItemsToDrop: 0
+  itemPool: []
   dropPrefab: {fileID: 8730514117533583190, guid: 7aaa3324c1c4b054ebebaafe3343bf25, type: 3}
 --- !u!1 &5413061283799475925
 GameObject:
@@ -1004,14 +994,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8391695977692023365, guid: 283d3449409af034e8c3ee7513141f6e, type: 3}
-      propertyPath: m_SortingLayer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8391695977692023365, guid: 283d3449409af034e8c3ee7513141f6e, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1724668973
-      objectReference: {fileID: 0}
     - target: {fileID: 8391695977692023367, guid: 283d3449409af034e8c3ee7513141f6e, type: 3}
       propertyPath: m_Name
       value: IgniteFX
@@ -1087,14 +1069,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3376266647829427755, guid: 5ee4612ebbfdefb488b04fed763655b1, type: 3}
-      propertyPath: m_SortingLayer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3376266647829427755, guid: 5ee4612ebbfdefb488b04fed763655b1, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1724668973
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1121,14 +1095,6 @@ PrefabInstance:
     - target: {fileID: 3038427717818873336, guid: 406035b4affc86141acb6b2db90f9cbd, type: 3}
       propertyPath: m_Name
       value: ChillFX
-      objectReference: {fileID: 0}
-    - target: {fileID: 3038427717818873342, guid: 406035b4affc86141acb6b2db90f9cbd, type: 3}
-      propertyPath: m_SortingLayer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3038427717818873342, guid: 406035b4affc86141acb6b2db90f9cbd, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1724668973
       objectReference: {fileID: 0}
     - target: {fileID: 3038427717818873343, guid: 406035b4affc86141acb6b2db90f9cbd, type: 3}
       propertyPath: m_RootOrder
