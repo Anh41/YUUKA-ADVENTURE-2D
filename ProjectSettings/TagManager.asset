@@ -44,15 +44,24 @@ TagManager:
   - name: Background
     uniqueID: 3934224579
     locked: 0
+  - name: Decor
+    uniqueID: 1301045001
+    locked: 0
   - name: Ground
     uniqueID: 3751335927
     locked: 0
-  - name: Enemy
+  - name: CheckPoint
     uniqueID: 1608310719
     locked: 0
-  - name: Player
+  - name: Item
     uniqueID: 3789855713
     locked: 0
-  - name: Item
+  - name: Enemy
     uniqueID: 2213554181
+    locked: 0
+  - name: Player
+    uniqueID: 2218754737
+    locked: 0
+  - name: FX
+    uniqueID: 1724668973
     locked: 0

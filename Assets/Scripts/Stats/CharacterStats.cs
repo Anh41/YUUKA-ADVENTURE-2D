@@ -6,7 +6,7 @@ public enum StatType
 {
     strength,
     agility,
-    intelegence,
+    intelligence,
     vitality,
     damage,
     critChance,
@@ -28,7 +28,7 @@ public class CharacterStats : MonoBehaviour
     public Stat strength; // 1 point increase damage by 1 and crit.power by 1%
     public Stat agility;  // 1 point increase evasion by 1% and crit.chance by 1%
     public Stat intelligence; // 1 point increase magic damage by 1 and magic resistance by 3
-    public Stat vitality; // 1 point incredase health by 5 points
+    public Stat vitality; // 1 point increase health by 5 points
 
     [Header("Offensive stats")]
     public Stat damage;
@@ -58,7 +58,7 @@ public class CharacterStats : MonoBehaviour
     private float shockedTimer;
 
 
-    private float igniteDamageCoodlown = .3f;
+    private float igniteDamageCooldown = .3f;
     private float igniteDamageTimer;
     private int igniteDamage;
     [SerializeField] private GameObject shockStrikePrefab;
@@ -67,6 +67,7 @@ public class CharacterStats : MonoBehaviour
 
     public System.Action onHealthChanged;
     public bool isDead { get; private set; }
+    public bool isInvincible { get; private set; }
     private bool isVulnerable;
 
     protected virtual void Start()
@@ -129,15 +130,26 @@ public class CharacterStats : MonoBehaviour
 
     public virtual void DoDamage(CharacterStats _targetStats)
     {
+        bool criticalStrike = false;
+
+
+        if (_targetStats.isInvincible)
+            return;
+
         if (TargetCanAvoidAttack(_targetStats))
             return;
+
+        _targetStats.GetComponent<Entity>().SetupKnockbackDir(transform);
 
         int totalDamage = damage.GetValue() + strength.GetValue();
 
         if (CanCrit())
         {
             totalDamage = CalculateCriticalDamage(totalDamage);
+            criticalStrike = true;
         }
+
+        fx.CreateHitFx(_targetStats.transform,criticalStrike);
 
         totalDamage = CheckTargetArmor(_targetStats, totalDamage);
         _targetStats.TakeDamage(totalDamage);
@@ -309,7 +321,7 @@ public class CharacterStats : MonoBehaviour
             if (currentHealth < 0 && !isDead)
                 Die();
 
-            igniteDamageTimer = igniteDamageCoodlown;
+            igniteDamageTimer = igniteDamageCooldown;
         }
     }
 
@@ -320,7 +332,13 @@ public class CharacterStats : MonoBehaviour
 
     public virtual void TakeDamage(int _damage)
     {
+
+        if (isInvincible)
+            return;
+
         DecreaseHealthBy(_damage);
+
+
 
         GetComponent<Entity>().DamageImpact();
         fx.StartCoroutine("FlashFX");
@@ -352,6 +370,9 @@ public class CharacterStats : MonoBehaviour
 
         currentHealth -= _damage;
 
+        if (_damage > 0)
+            fx.CreatePopUpText(_damage.ToString());
+
         if (onHealthChanged != null)
             onHealthChanged();
     }
@@ -360,6 +381,14 @@ public class CharacterStats : MonoBehaviour
     {
         isDead = true;
     }
+
+    public void KillEntity()
+    {
+        if (!isDead)
+            Die();
+    }
+
+    public void MakeInvincible(bool _invincible) => isInvincible = _invincible;
 
 
     #region Stat calculations
@@ -436,7 +465,7 @@ public class CharacterStats : MonoBehaviour
     {
         if (_statType == StatType.strength) return strength;
         else if (_statType == StatType.agility) return agility;
-        else if (_statType == StatType.intelegence) return intelligence;
+        else if (_statType == StatType.intelligence) return intelligence;
         else if (_statType == StatType.vitality) return vitality;
         else if (_statType == StatType.damage) return damage;
         else if (_statType == StatType.critChance) return critChance;
